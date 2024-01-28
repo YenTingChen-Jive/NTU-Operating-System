@@ -1,0 +1,15 @@
+== Test thread package with public testcase 0 (20%) ==
+thread package with public testcase 0: OK (14.4s)
+== Test thread package with public testcase 1 (20%) ==
+thread package with public testcase 1: OK (1.2s)
+== Test thread package with private testcase 0 (15%) ==
+thread package with private testcase 0: FAIL (1.0s)
+    [Error] Output on line 117: 'thread 14: 9', should be 'thread 15: 9'
+== Test thread package with private testcase 1 (15%) ==
+thread package with private testcase 1: OK (0.8s)
+== Test thread package with private testcase 2 (15%) ==
+thread package with private testcase 2: OK (1.0s)
+== Test thread package with private testcase 3 (15%) ==
+thread package with private testcase 3: FAIL (1.0s)
+    [Error] Output on line 16: ' (-) ', should be ' (o) '
+Score: 70/100

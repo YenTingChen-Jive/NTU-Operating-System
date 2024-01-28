@@ -1,0 +1,39 @@
+== Test tree command with public testcase 0 (5%) ==
+***
+*** Error: Couldn't find a riscv64 version of GCC/binutils.
+*** To turn off this error, run 'gmake TOOLPREFIX= ...'.
+***
+Failed to connect to QEMU; output:
+***
+*** Error: Couldn't find a riscv64 version of GCC/binutils.
+*** To turn off this error, run 'gmake TOOLPREFIX= ...'.
+***
+kernel/entry.S:5:15: error: unexpected token in '.section' directive
+.section .text
+              ^
+kernel/entry.S:11:9: error: unrecognized instruction mnemonic, did you mean: bl, fmla, ldar, mla?
+        la sp, stack0
+        ^
+kernel/entry.S:12:9: error: unrecognized instruction mnemonic, did you mean: bl, sli?
+        li a0, 1024*4
+        ^
+kernel/entry.S:13:2: error: unrecognized instruction mnemonic
+ csrr a1, mhartid
+ ^
+kernel/entry.S:14:9: error: unrecognized instruction mnemonic, did you mean: add, addp, adds, addv, fadd, madd?
+        addi a1, a1, 1
+        ^
+kernel/entry.S:15:13: error: invalid operand for instruction
+        mul a0, a0, a1
+            ^
+kernel/entry.S:16:21: error: expected compatible register, symbol or integer in range [0, 4095]
+        add sp, sp, a0
+                    ^
+kernel/entry.S:18:9: error: unrecognized instruction mnemonic, did you mean: casl?
+        call start
+        ^
+kernel/entry.S:20:9: error: unrecognized instruction mnemonic, did you mean: b?
+        j spin
+        ^
+make[1]: *** [kernel/entry.o] Error 1
+
